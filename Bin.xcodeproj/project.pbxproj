@@ -1,0 +1,846 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"Bin::BinPackageTests::ProductTarget" /* BinPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_113 /* Build configuration list for PBXAggregateTarget "BinPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_116 /* PBXTargetDependency */,
+			);
+			name = BinPackageTests;
+			productName = BinPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		36E2CBCC25B5779100558DC1 /* Framezilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCA25B5779100558DC1 /* Framezilla.framework */; };
+		36E2CBCE25B5779100558DC1 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCB25B5779100558DC1 /* Base.framework */; };
+		36E2CBDC25B5786D00558DC1 /* Deboogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBDB25B5786D00558DC1 /* Deboogger.framework */; };
+		36E2CBE825B57A0000558DC1 /* VisualEffectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */; };
+		OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIViewController+KeyboardNotifications.swift */; };
+		OBJ_101 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Shadow.swift */; };
+		OBJ_102 /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ListPager.swift */; };
+		OBJ_103 /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* LoadingStatus.swift */; };
+		OBJ_104 /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* UIResponder+Current.swift */; };
+		OBJ_111 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_124 /* PatternTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_61 /* PatternTimerTests.swift */; };
+		OBJ_126 /* ListPagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_64 /* ListPagerTests.swift */; };
+		OBJ_128 /* Bin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Bin::Bin::Product" /* Bin.framework */; };
+		OBJ_78 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* AppConfiguration.swift */; };
+		OBJ_80 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Coordinator.swift */; };
+		OBJ_82 /* DictionaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* DictionaryDecoder.swift */; };
+		OBJ_83 /* DictionaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DictionaryEncoder.swift */; };
+		OBJ_84 /* Data+Pack.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* Data+Pack.swift */; };
+		OBJ_85 /* PatternTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* PatternTimer.swift */; };
+		OBJ_86 /* ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* ShadowStyle.swift */; };
+		OBJ_87 /* ButtomOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* ButtomOperationView.swift */; };
+		OBJ_88 /* CustomBlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* CustomBlurEffectView.swift */; };
+		OBJ_89 /* CustomOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CustomOperationView.swift */; };
+		OBJ_90 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* LoadingView.swift */; };
+		OBJ_91 /* OperationContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* OperationContainerView.swift */; };
+		OBJ_92 /* BarAnimationConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* BarAnimationConfiguration.swift */; };
+		OBJ_93 /* PlaybackIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* PlaybackIndicatorView.swift */; };
+		OBJ_94 /* SafeAreaContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* SafeAreaContainerView.swift */; };
+		OBJ_95 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* SecureTextField.swift */; };
+		OBJ_96 /* TextFieldInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* TextFieldInputView.swift */; };
+		OBJ_97 /* AlignButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* AlignButton.swift */; };
+		OBJ_98 /* TextInputTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* TextInputTraits.swift */; };
+		OBJ_99 /* UITextField+TextInputTraits.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* UITextField+TextInputTraits.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36E2CBC825B5778300558DC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Bin::Bin";
+			remoteInfo = Bin;
+		};
+		36E2CBD825B577A100558DC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Bin::BinTests";
+			remoteInfo = BinTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36E2CBCA25B5779100558DC1 /* Framezilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Framezilla.framework; path = Carthage/Build/iOS/Framezilla.framework; sourceTree = "<group>"; };
+		36E2CBCB25B5779100558DC1 /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = Carthage/Build/iOS/Base.framework; sourceTree = "<group>"; };
+		36E2CBDB25B5786D00558DC1 /* Deboogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Deboogger.framework; path = Carthage/Build/iOS/Deboogger.framework; sourceTree = "<group>"; };
+		36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualEffectView.framework; path = Carthage/Build/iOS/VisualEffectView.framework; sourceTree = "<group>"; };
+		"Bin::Bin::Product" /* Bin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Bin::BinTests::Product" /* BinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = BinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_13 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		OBJ_19 /* DictionaryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDecoder.swift; sourceTree = "<group>"; };
+		OBJ_20 /* DictionaryEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEncoder.swift; sourceTree = "<group>"; };
+		OBJ_22 /* Data+Pack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Pack.swift"; sourceTree = "<group>"; };
+		OBJ_24 /* PatternTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTimer.swift; sourceTree = "<group>"; };
+		OBJ_26 /* ShadowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
+		OBJ_29 /* ButtomOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtomOperationView.swift; sourceTree = "<group>"; };
+		OBJ_30 /* CustomBlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurEffectView.swift; sourceTree = "<group>"; };
+		OBJ_31 /* CustomOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperationView.swift; sourceTree = "<group>"; };
+		OBJ_32 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		OBJ_33 /* OperationContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationContainerView.swift; sourceTree = "<group>"; };
+		OBJ_35 /* BarAnimationConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarAnimationConfiguration.swift; sourceTree = "<group>"; };
+		OBJ_36 /* PlaybackIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackIndicatorView.swift; sourceTree = "<group>"; };
+		OBJ_37 /* SafeAreaContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaContainerView.swift; sourceTree = "<group>"; };
+		OBJ_38 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
+		OBJ_39 /* TextFieldInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInputView.swift; sourceTree = "<group>"; };
+		OBJ_41 /* AlignButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignButton.swift; sourceTree = "<group>"; };
+		OBJ_45 /* TextInputTraits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputTraits.swift; sourceTree = "<group>"; };
+		OBJ_46 /* UITextField+TextInputTraits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+TextInputTraits.swift"; sourceTree = "<group>"; };
+		OBJ_47 /* UIViewController+KeyboardNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyboardNotifications.swift"; sourceTree = "<group>"; };
+		OBJ_49 /* Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
+		OBJ_51 /* ListPager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPager.swift; sourceTree = "<group>"; };
+		OBJ_52 /* LoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
+		OBJ_54 /* UIResponder+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Current.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_61 /* PatternTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTimerTests.swift; sourceTree = "<group>"; };
+		OBJ_64 /* ListPagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerTests.swift; sourceTree = "<group>"; };
+		OBJ_68 /* xcfilelists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcfilelists; sourceTree = SOURCE_ROOT; };
+		OBJ_69 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
+		OBJ_70 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
+		OBJ_71 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		OBJ_72 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_9 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_105 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				36E2CBCC25B5779100558DC1 /* Framezilla.framework in Frameworks */,
+				36E2CBDC25B5786D00558DC1 /* Deboogger.framework in Frameworks */,
+				36E2CBE825B57A0000558DC1 /* VisualEffectView.framework in Frameworks */,
+				36E2CBCE25B5779100558DC1 /* Base.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_128 /* Bin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36E2CBC925B5779100558DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */,
+				36E2CBDB25B5786D00558DC1 /* Deboogger.framework */,
+				36E2CBCB25B5779100558DC1 /* Base.framework */,
+				36E2CBCA25B5779100558DC1 /* Framezilla.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		OBJ_12 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_13 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		OBJ_17 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_18 /* Coding */,
+				OBJ_21 /* Data */,
+				OBJ_23 /* PatternTimer */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		OBJ_18 /* Coding */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* DictionaryDecoder.swift */,
+				OBJ_20 /* DictionaryEncoder.swift */,
+			);
+			path = Coding;
+			sourceTree = "<group>";
+		};
+		OBJ_21 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* Data+Pack.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* PatternTimer */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* PatternTimer.swift */,
+			);
+			path = PatternTimer;
+			sourceTree = "<group>";
+		};
+		OBJ_25 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_26 /* ShadowStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		OBJ_27 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_28 /* Common */,
+				OBJ_40 /* Dependent */,
+				OBJ_48 /* Independent */,
+				OBJ_50 /* ListPager */,
+				OBJ_53 /* Responder */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		OBJ_28 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* ButtomOperationView.swift */,
+				OBJ_30 /* CustomBlurEffectView.swift */,
+				OBJ_31 /* CustomOperationView.swift */,
+				OBJ_32 /* LoadingView.swift */,
+				OBJ_33 /* OperationContainerView.swift */,
+				OBJ_34 /* PlaybackIndicatorView */,
+				OBJ_37 /* SafeAreaContainerView.swift */,
+				OBJ_38 /* SecureTextField.swift */,
+				OBJ_39 /* TextFieldInputView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		OBJ_34 /* PlaybackIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_35 /* BarAnimationConfiguration.swift */,
+				OBJ_36 /* PlaybackIndicatorView.swift */,
+			);
+			path = PlaybackIndicatorView;
+			sourceTree = "<group>";
+		};
+		OBJ_40 /* Dependent */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_41 /* AlignButton.swift */,
+				OBJ_42 /* UIKit */,
+			);
+			path = Dependent;
+			sourceTree = "<group>";
+		};
+		OBJ_42 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_43 /* Extensions */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		OBJ_43 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_44 /* TextInputTraits */,
+				OBJ_47 /* UIViewController+KeyboardNotifications.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_44 /* TextInputTraits */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* TextInputTraits.swift */,
+				OBJ_46 /* UITextField+TextInputTraits.swift */,
+			);
+			path = TextInputTraits;
+			sourceTree = "<group>";
+		};
+		OBJ_48 /* Independent */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_49 /* Shadow.swift */,
+			);
+			path = Independent;
+			sourceTree = "<group>";
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_55 /* Tests */,
+				OBJ_65 /* Products */,
+				OBJ_68 /* xcfilelists */,
+				OBJ_69 /* Carthage */,
+				OBJ_70 /* Cartfile.resolved */,
+				OBJ_71 /* Cartfile */,
+				OBJ_72 /* README.md */,
+				36E2CBC925B5779100558DC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_50 /* ListPager */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_51 /* ListPager.swift */,
+				OBJ_52 /* LoadingStatus.swift */,
+			);
+			path = ListPager;
+			sourceTree = "<group>";
+		};
+		OBJ_53 /* Responder */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_54 /* UIResponder+Current.swift */,
+			);
+			path = Responder;
+			sourceTree = "<group>";
+		};
+		OBJ_55 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_59 /* Foundation */,
+				OBJ_63 /* UIKit */,
+			);
+			path = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_59 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_60 /* PatternTimer */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		OBJ_60 /* PatternTimer */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_61 /* PatternTimerTests.swift */,
+			);
+			path = PatternTimer;
+			sourceTree = "<group>";
+		};
+		OBJ_63 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_64 /* ListPagerTests.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		OBJ_65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Bin::Bin::Product" /* Bin.framework */,
+				"Bin::BinTests::Product" /* BinTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* AppConfiguration */,
+				OBJ_12 /* Coordinators */,
+				OBJ_17 /* Foundation */,
+				OBJ_25 /* Styles */,
+				OBJ_27 /* UIKit */,
+			);
+			path = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* AppConfiguration.swift */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"Bin::Bin" /* Bin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_74 /* Build configuration list for PBXNativeTarget "Bin" */;
+			buildPhases = (
+				OBJ_77 /* Sources */,
+				OBJ_105 /* Frameworks */,
+				A292D38650B169F8D128F2B2 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bin;
+			productName = Bin;
+			productReference = "Bin::Bin::Product" /* Bin.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Bin::BinTests" /* BinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_118 /* Build configuration list for PBXNativeTarget "BinTests" */;
+			buildPhases = (
+				OBJ_121 /* Sources */,
+				OBJ_127 /* Frameworks */,
+				51CE8B6C510BB1AEC8BDD646 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_129 /* PBXTargetDependency */,
+			);
+			name = BinTests;
+			productName = BinTests;
+			productReference = "Bin::BinTests::Product" /* BinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"Bin::SwiftPMPackageDescription" /* BinPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_107 /* Build configuration list for PBXNativeTarget "BinPackageDescription" */;
+			buildPhases = (
+				OBJ_110 /* Sources */,
+				A8E50C1E273DDC739468F289 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinPackageDescription;
+			productName = BinPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftMigration = 9999;
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "Bin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5;
+			productRefGroup = OBJ_65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"Bin::Bin" /* Bin */,
+				"Bin::SwiftPMPackageDescription" /* BinPackageDescription */,
+				"Bin::BinPackageTests::ProductTarget" /* BinPackageTests */,
+				"Bin::BinTests" /* BinTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51CE8B6C510BB1AEC8BDD646 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/BinTests-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/BinTests-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A292D38650B169F8D128F2B2 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/Bin-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/Bin-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		A8E50C1E273DDC739468F289 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/BinPackageDescription-inputPaths.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = Carthage;
+			outputFileListPaths = (
+				"$(SRCROOT)/xcfilelists/BinPackageDescription-outputPaths.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_111 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_124 /* PatternTimerTests.swift in Sources */,
+				OBJ_126 /* ListPagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_78 /* AppConfiguration.swift in Sources */,
+				OBJ_80 /* Coordinator.swift in Sources */,
+				OBJ_82 /* DictionaryDecoder.swift in Sources */,
+				OBJ_83 /* DictionaryEncoder.swift in Sources */,
+				OBJ_84 /* Data+Pack.swift in Sources */,
+				OBJ_85 /* PatternTimer.swift in Sources */,
+				OBJ_86 /* ShadowStyle.swift in Sources */,
+				OBJ_87 /* ButtomOperationView.swift in Sources */,
+				OBJ_88 /* CustomBlurEffectView.swift in Sources */,
+				OBJ_89 /* CustomOperationView.swift in Sources */,
+				OBJ_90 /* LoadingView.swift in Sources */,
+				OBJ_91 /* OperationContainerView.swift in Sources */,
+				OBJ_92 /* BarAnimationConfiguration.swift in Sources */,
+				OBJ_93 /* PlaybackIndicatorView.swift in Sources */,
+				OBJ_94 /* SafeAreaContainerView.swift in Sources */,
+				OBJ_95 /* SecureTextField.swift in Sources */,
+				OBJ_96 /* TextFieldInputView.swift in Sources */,
+				OBJ_97 /* AlignButton.swift in Sources */,
+				OBJ_98 /* TextInputTraits.swift in Sources */,
+				OBJ_99 /* UITextField+TextInputTraits.swift in Sources */,
+				OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */,
+				OBJ_101 /* Shadow.swift in Sources */,
+				OBJ_102 /* ListPager.swift in Sources */,
+				OBJ_103 /* LoadingStatus.swift in Sources */,
+				OBJ_104 /* UIResponder+Current.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_116 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Bin::BinTests" /* BinTests */;
+			targetProxy = 36E2CBD825B577A100558DC1 /* PBXContainerItemProxy */;
+		};
+		OBJ_129 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Bin::Bin" /* Bin */;
+			targetProxy = 36E2CBC825B5778300558DC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_108 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_109 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_114 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_119 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Bin.xcodeproj/BinTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BinTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_120 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Bin.xcodeproj/BinTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = BinTests;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+					"DEBUG=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SWIFT_PACKAGE=1",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Bin.xcodeproj/Bin_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Bin;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Bin;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		OBJ_76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Bin.xcodeproj/Bin_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Bin;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = Bin;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_107 /* Build configuration list for PBXNativeTarget "BinPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_108 /* Debug */,
+				OBJ_109 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_113 /* Build configuration list for PBXAggregateTarget "BinPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_114 /* Debug */,
+				OBJ_115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_118 /* Build configuration list for PBXNativeTarget "BinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_119 /* Debug */,
+				OBJ_120 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "Bin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_74 /* Build configuration list for PBXNativeTarget "Bin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_75 /* Debug */,
+				OBJ_76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
