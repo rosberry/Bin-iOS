@@ -1,0 +1,4 @@
+github "Rosberry/Deboogger" "0.12"
+github "Rosberry/Framezilla" "5.1.0"
+github "efremidze/VisualEffectView" "4.1.3"
+github "rosberry/Base-iOS" "6f41cb3025a8eadb52da0c29e8d5a6be08e4ef9f"

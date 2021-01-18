@@ -1,0 +1,4 @@
+$(SRCROOT)/Carthage/Build/iOS/Base.framework
+$(SRCROOT)/Carthage/Build/iOS/Deboogger.framework
+$(SRCROOT)/Carthage/Build/iOS/Framezilla.framework
+$(SRCROOT)/Carthage/Build/iOS/VisualEffectView.framework

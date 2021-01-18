@@ -1,0 +1,4 @@
+github "rosberry/Base-iOS" "master"
+github "Rosberry/Deboogger"
+github "rosberry/TouchVisualizer" "master"
+github "efremidze/VisualEffectView"
