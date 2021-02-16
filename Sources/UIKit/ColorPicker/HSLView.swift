@@ -38,8 +38,15 @@ public final class HSLView: UIView {
 
     private lazy var bundle: Bundle = .init(for: HSLView.self)
 
+    // If color is provided from external code then we need place magnifier, else we need only to remember a new value
+    private var _color: UIColor?
+
     public var color: UIColor? {
-        didSet {
+        get {
+            _color
+        }
+        set {
+            _color = newValue
             if let color = self.color {
                 magnifierView.center = magnifierViewCenter(forColor: color)
                 magnifierView.backgroundColor = color
@@ -97,6 +104,9 @@ public final class HSLView: UIView {
         grayScaleImageView.configureFrame { maker in
             maker.top().bottom().right().width(grayscaleWidth)
         }
+        if let color = _color {
+            magnifierView.center = magnifierViewCenter(forColor: color)
+        }
     }
 
     // MARK: - Actions
@@ -110,9 +120,12 @@ public final class HSLView: UIView {
                                 saturation: saturation(for: touchPosition),
                                 brightness: brightness(for: touchPosition),
                                 alpha: 1.0)
-            self.color = color
+            magnifierView.center = touchPosition
+            magnifierView.backgroundColor = color
+            _color = color
             delegate?.hslView(self, didSelectColor: color)
         }
+        magnifierView.isHidden = false
         delegate?.hslViewDidSelectAllColorItems(self)
         switch recognizer.state {
         case .began:
@@ -152,31 +165,36 @@ public final class HSLView: UIView {
         let saturation: UnsafeMutablePointer<CGFloat> = .allocate(capacity: 1)
         let brightness: UnsafeMutablePointer<CGFloat> = .allocate(capacity: 1)
         color.getHue(hue, saturation: saturation, brightness: brightness, alpha: nil)
-        let x = hue.pointee * hueSaturationImageView.bounds.width
-        let y: CGFloat
-        if brightness.pointee < 1 {
-            y = (1 - brightness.pointee / 2) * hueSaturationImageView.bounds.height
-        }
-        else if saturation.pointee < 1 {
-            y = saturation.pointee / 2 * hueSaturationImageView.bounds.height
+        var x = hue.pointee * containerView.bounds.width
+        var y = 0.5 * hueSaturationImageView.bounds.height
+
+        if saturation.pointee == 0 { // Gray scale
+            x = containerView.bounds.width
+            y = (1 - brightness.pointee) * hueSaturationImageView.bounds.height
         }
         else {
-            y = 0.5 * hueSaturationImageView.bounds.height
+            x = hue.pointee * containerView.bounds.width
+            if brightness.pointee < 1 {
+                y = (1 - brightness.pointee / 2) * hueSaturationImageView.bounds.height
+            }
+            else if saturation.pointee < 1 {
+                y = saturation.pointee / 2 * hueSaturationImageView.bounds.height
+            }
         }
         return .init(x: x, y: y)
     }
 
     private func hue(for position: CGPoint) -> CGFloat {
-        return (position.x - hueSaturationImageView.frame.origin.x) / (hueSaturationImageView.frame.width - grayscaleWidth)
+        return position.x / hueSaturationImageView.frame.width
     }
 
     private func saturation(for position: CGPoint) -> CGFloat {
         if grayscaleWidth > 0,
-           hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleWidth {
+           containerView.bounds.width - position.x <= grayscaleWidth {
             return 0.0
         }
 
-        let pointY = (position.y - hueSaturationImageView.frame.origin.y) / hueSaturationImageView.frame.height
+        let pointY = position.y / containerView.bounds.height
         if pointY < 0.5 {
             return 1.0 - (0.5 - pointY) * 2
         }
@@ -187,11 +205,11 @@ public final class HSLView: UIView {
 
     private func brightness(for position: CGPoint) -> CGFloat {
         if grayscaleWidth > 0,
-           hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleWidth {
-            return 1.0 - (position.y - hueSaturationImageView.frame.origin.y) / hueSaturationImageView.frame.height
+           containerView.bounds.width - position.x <= grayscaleWidth {
+            return 1.0 - position.y / containerView.bounds.height
         }
 
-        let pointY = (position.y - hueSaturationImageView.frame.origin.y) / hueSaturationImageView.frame.height
+        let pointY = position.y / containerView.bounds.height
         if pointY > 0.5 {
             return 1.0 - (pointY - 0.5) * 2
         }
