@@ -4,7 +4,7 @@
 
 import UIKit
 
-final class MagnifierView: UIView {
+public final class MagnifierView: UIView {
 
     var borderColor: UIColor = .gray
     var borderWidth: CGFloat = 4.0
@@ -19,7 +19,7 @@ final class MagnifierView: UIView {
         setup()
     }
 
-    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+    public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         if frame.contains(point) {
             return superview
         }

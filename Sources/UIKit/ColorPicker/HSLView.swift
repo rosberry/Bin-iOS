@@ -5,16 +5,16 @@
 import UIKit
 import Framezilla
 
-protocol HSLViewDelegate: class {
+public protocol HSLViewDelegate: class {
     func hslView(_ hslView: HSLView, didSelectColor color: UIColor)
     func hslViewDidSelectAllColorItems(_ hslView: HSLView)
     func hslViewDidBeginColorSelection(_ hslView: HSLView)
     func hslViewDidEndColorSelection(_ hslView: HSLView)
 }
 
-final class HSLView: UIView {
+public final class HSLView: UIView {
 
-    weak var delegate: HSLViewDelegate?
+    public weak var delegate: HSLViewDelegate?
 
     private(set) lazy var tapGestureRecognizer: UITapGestureRecognizer = {
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hueSaturationViewRecognizerTriggered))
@@ -48,7 +48,7 @@ final class HSLView: UIView {
         return imageView
     }()
 
-    private lazy var magnifierView = MagnifierView()
+    public lazy var magnifierView = MagnifierView()
 
     private lazy var gestureRecognizersContainerView: UIView = .init()
 
