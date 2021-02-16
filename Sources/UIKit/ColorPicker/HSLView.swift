@@ -38,6 +38,19 @@ public final class HSLView: UIView {
 
     private lazy var bundle: Bundle = .init(for: HSLView.self)
 
+    public var color: UIColor? {
+        didSet {
+            if let color = self.color {
+                magnifierView.center = magnifierViewCenter(forColor: color)
+                magnifierView.backgroundColor = color
+                magnifierView.isHidden = false
+            }
+            else {
+                magnifierView.isHidden = true
+            }
+        }
+    }
+
     // MARK: - Subviews
 
     private lazy var hueSaturationImageView: UIImageView = {
@@ -86,12 +99,6 @@ public final class HSLView: UIView {
         }
     }
 
-    // MARK: -
-
-    func setMagnifierViewHidden() {
-        magnifierView.isHidden = true
-    }
-
     // MARK: - Actions
 
     @objc private func hueSaturationViewRecognizerTriggered(_ recognizer: UIGestureRecognizer) {
@@ -99,15 +106,13 @@ public final class HSLView: UIView {
             var touchPosition = recognizer.location(in: self)
             touchPosition = point(touchPosition, thatFits: hueSaturationImageView.frame)
 
-            magnifierView.center = touchPosition
             let color = UIColor(hue: hue(for: touchPosition),
                                 saturation: saturation(for: touchPosition),
                                 brightness: brightness(for: touchPosition),
                                 alpha: 1.0)
-            magnifierView.backgroundColor = color
+            self.color = color
             delegate?.hslView(self, didSelectColor: color)
         }
-        magnifierView.isHidden = false
         delegate?.hslViewDidSelectAllColorItems(self)
         switch recognizer.state {
         case .began:
@@ -125,10 +130,6 @@ public final class HSLView: UIView {
 
     // MARK: - Private
 
-    private func image(withName name: String) -> UIImage? {
-        UIImage(named: name, in: bundle, compatibleWith: nil)
-    }
-
     private func setup() {
         add(containerView, magnifierView)
         containerView.add(hueSaturationImageView, grayScaleImageView)
@@ -140,6 +141,29 @@ public final class HSLView: UIView {
             self.hueSaturationImageView.image = self.image(withName: "hslColorPicker")
             self.grayScaleImageView.image = self.image(withName: "grayScale")
         }
+    }
+
+    private func image(withName name: String) -> UIImage? {
+        UIImage(named: name, in: bundle, compatibleWith: nil)
+    }
+
+    private func magnifierViewCenter(forColor color: UIColor) -> CGPoint {
+        let hue: UnsafeMutablePointer<CGFloat> = .allocate(capacity: 1)
+        let saturation: UnsafeMutablePointer<CGFloat> = .allocate(capacity: 1)
+        let brightness: UnsafeMutablePointer<CGFloat> = .allocate(capacity: 1)
+        color.getHue(hue, saturation: saturation, brightness: brightness, alpha: nil)
+        let x = hue.pointee * hueSaturationImageView.bounds.width
+        let y: CGFloat
+        if brightness.pointee < 1 {
+            y = (1 - brightness.pointee / 2) * hueSaturationImageView.bounds.height
+        }
+        else if saturation.pointee < 1 {
+            y = saturation.pointee / 2 * hueSaturationImageView.bounds.height
+        }
+        else {
+            y = 0.5 * hueSaturationImageView.bounds.height
+        }
+        return .init(x: x, y: y)
     }
 
     private func hue(for position: CGPoint) -> CGFloat {
