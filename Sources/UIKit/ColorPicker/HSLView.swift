@@ -26,31 +26,42 @@ public final class HSLView: UIView {
         return gestureRecognizer
     }()
 
-    public var relativeGrayscaleWidth: CGFloat = 0.02
-    public var borderColor: UIColor = .gray
-    public var image: UIImage? = UIImage(named: "hslColorPicker")
-    public var viewInsets: UIEdgeInsets = .init(top: 16, left: 16, bottom: 16, right: 16)
-
-    private var grayscaleRegionWidth: CGFloat {
-        return  relativeGrayscaleWidth * hueSaturationImageView.frame.width
+    public var relativeGrayscaleWidth: CGFloat = 0.02 {
+        didSet {
+            setNeedsLayout()
+        }
     }
+
+    private var grayscaleWidth: CGFloat {
+        return  bounds.width * relativeGrayscaleWidth
+    }
+
+    private lazy var bundle: Bundle = .init(for: HSLView.self)
 
     // MARK: - Subviews
 
     private lazy var hueSaturationImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.borderWidth = 1
-        imageView.layer.borderColor = borderColor.cgColor
-        imageView.layer.cornerRadius = 4
-        imageView.image = image
-        imageView.clipsToBounds = true
         imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
-    public lazy var magnifierView = MagnifierView()
+    private lazy var grayScaleImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
 
-    private lazy var gestureRecognizersContainerView: UIView = .init()
+    public private(set) lazy var magnifierView = MagnifierView()
+
+    public private(set) lazy var containerView: UIView = {
+        let view = UIView()
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.gray.cgColor
+        view.layer.cornerRadius = 4
+        view.clipsToBounds = true
+        return view
+    }()
 
     // MARK: - Lifecycle
 
@@ -64,11 +75,14 @@ public final class HSLView: UIView {
         setup()
     }
 
-    override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
-        gestureRecognizersContainerView.frame = bounds
+        containerView.frame = bounds
         hueSaturationImageView.configureFrame { maker in
-            maker.edges(insets: viewInsets)
+            maker.left().top().bottom().right(inset: grayscaleWidth)
+        }
+        grayScaleImageView.configureFrame { maker in
+            maker.top().bottom().right().width(grayscaleWidth)
         }
     }
 
@@ -111,19 +125,30 @@ public final class HSLView: UIView {
 
     // MARK: - Private
 
+    private func image(withName name: String) -> UIImage? {
+        UIImage(named: name, in: bundle, compatibleWith: nil)
+    }
+
     private func setup() {
-        add(hueSaturationImageView, gestureRecognizersContainerView, magnifierView)
-        gestureRecognizersContainerView.addGestureRecognizer(tapGestureRecognizer)
-        gestureRecognizersContainerView.addGestureRecognizer(panGestureRecognizer)
+        add(containerView, magnifierView)
+        containerView.add(hueSaturationImageView, grayScaleImageView)
+        containerView.addGestureRecognizer(tapGestureRecognizer)
+        containerView.addGestureRecognizer(panGestureRecognizer)
         magnifierView.isHidden = true
+        // Does not displayed without it
+        DispatchQueue.main.async {
+            self.hueSaturationImageView.image = self.image(withName: "hslColorPicker")
+            self.grayScaleImageView.image = self.image(withName: "grayScale")
+        }
     }
 
     private func hue(for position: CGPoint) -> CGFloat {
-        return (position.x - hueSaturationImageView.frame.origin.x) / (hueSaturationImageView.frame.width - grayscaleRegionWidth)
+        return (position.x - hueSaturationImageView.frame.origin.x) / (hueSaturationImageView.frame.width - grayscaleWidth)
     }
 
     private func saturation(for position: CGPoint) -> CGFloat {
-        if hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleRegionWidth {
+        if grayscaleWidth > 0,
+           hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleWidth {
             return 0.0
         }
 
@@ -137,7 +162,8 @@ public final class HSLView: UIView {
     }
 
     private func brightness(for position: CGPoint) -> CGFloat {
-        if hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleRegionWidth {
+        if grayscaleWidth > 0,
+           hueSaturationImageView.frame.width - (position.x - hueSaturationImageView.frame.origin.x) <= grayscaleWidth {
             return 1.0 - (position.y - hueSaturationImageView.frame.origin.y) / hueSaturationImageView.frame.height
         }
 
@@ -153,19 +179,5 @@ public final class HSLView: UIView {
     private func point(_ point: CGPoint, thatFits rect: CGRect) -> CGPoint {
         .init(x: min(max(point.x, rect.origin.x), rect.maxX),
               y: min(max(point.y, rect.origin.y), rect.maxY))
-    }
-}
-
-extension HSLViewDelegate {
-    func hslViewDidSelectAllColorItems(_ hslView: HSLView) {
-        //
-    }
-
-    func hslViewDidBeginColorSelection(_ hslView: HSLView) {
-        //
-    }
-
-    func hslViewDidEndColorSelection(_ hslView: HSLView) {
-        //
     }
 }

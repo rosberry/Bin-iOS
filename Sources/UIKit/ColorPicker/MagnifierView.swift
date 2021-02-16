@@ -6,9 +6,6 @@ import UIKit
 
 public final class MagnifierView: UIView {
 
-    var borderColor: UIColor = .gray
-    var borderWidth: CGFloat = 4.0
-
     init() {
         super.init(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         setup()
@@ -28,7 +25,7 @@ public final class MagnifierView: UIView {
 
     func setup() {
         layer.cornerRadius = frame.height / 2.0
-        layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.cgColor
+        layer.borderWidth = 4.0
+        layer.borderColor = UIColor.gray.cgColor
     }
 }

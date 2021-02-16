@@ -23,6 +23,7 @@
 /* Begin PBXBuildFile section */
 		01AD884525DB742A0012C127 /* HSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD884425DB742A0012C127 /* HSLView.swift */; };
 		01AD885725DB76300012C127 /* MagnifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD885625DB76300012C127 /* MagnifierView.swift */; };
+		01E2D6F425DB91F8000BE010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AD885D25DB76CB0012C127 /* Assets.xcassets */; };
 		36E2CBCC25B5779100558DC1 /* Framezilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCA25B5779100558DC1 /* Framezilla.framework */; };
 		36E2CBCE25B5779100558DC1 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCB25B5779100558DC1 /* Base.framework */; };
 		36E2CBDC25B5786D00558DC1 /* Deboogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBDB25B5786D00558DC1 /* Deboogger.framework */; };
@@ -409,6 +410,7 @@
 				OBJ_77 /* Sources */,
 				OBJ_105 /* Frameworks */,
 				A292D38650B169F8D128F2B2 /* Carthage */,
+				01E2D6F325DB91F2000BE010 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -480,6 +482,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		01E2D6F325DB91F2000BE010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01E2D6F425DB91F8000BE010 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		51CE8B6C510BB1AEC8BDD646 /* Carthage */ = {
