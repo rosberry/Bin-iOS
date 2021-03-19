@@ -1,3 +1,3 @@
-github "rosberry/Base-iOS" "master"
+github "rosberry/Base-iOS" "xcframework"
 github "Rosberry/Deboogger"
 github "efremidze/VisualEffectView"
