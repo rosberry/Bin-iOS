@@ -22,13 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		364D34F42604ADC000BACF1D /* Deboogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F02604ADC000BACF1D /* Deboogger.xcframework */; };
-		364D34F52604ADC000BACF1D /* Deboogger.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F02604ADC000BACF1D /* Deboogger.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */; };
-		364D34F72604ADC000BACF1D /* VisualEffectView.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F22604ADC000BACF1D /* Framezilla.xcframework */; };
-		364D34F92604ADC000BACF1D /* Framezilla.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F22604ADC000BACF1D /* Framezilla.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F32604ADC000BACF1D /* Base.xcframework */; };
-		364D34FB2604ADC000BACF1D /* Base.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F32604ADC000BACF1D /* Base.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIViewController+KeyboardNotifications.swift */; };
 		OBJ_101 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Shadow.swift */; };
 		OBJ_102 /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ListPager.swift */; };
@@ -76,23 +72,6 @@
 			remoteInfo = BinTests;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		364D34FC2604ADC000BACF1D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				364D34F52604ADC000BACF1D /* Deboogger.xcframework in Embed Frameworks */,
-				364D34F92604ADC000BACF1D /* Framezilla.xcframework in Embed Frameworks */,
-				364D34FB2604ADC000BACF1D /* Base.xcframework in Embed Frameworks */,
-				364D34F72604ADC000BACF1D /* VisualEffectView.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		364D34F02604ADC000BACF1D /* Deboogger.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Deboogger.xcframework; path = Carthage/Build/Deboogger.xcframework; sourceTree = "<group>"; };
@@ -411,7 +390,6 @@
 			buildPhases = (
 				OBJ_77 /* Sources */,
 				OBJ_105 /* Frameworks */,
-				364D34FC2604ADC000BACF1D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
