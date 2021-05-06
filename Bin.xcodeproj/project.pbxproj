@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,13 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		01AD884525DB742A0012C127 /* HSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD884425DB742A0012C127 /* HSLView.swift */; };
-		01AD885725DB76300012C127 /* MagnifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD885625DB76300012C127 /* MagnifierView.swift */; };
-		01E2D6F425DB91F8000BE010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01AD885D25DB76CB0012C127 /* Assets.xcassets */; };
-		36E2CBCC25B5779100558DC1 /* Framezilla.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCA25B5779100558DC1 /* Framezilla.framework */; };
-		36E2CBCE25B5779100558DC1 /* Base.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBCB25B5779100558DC1 /* Base.framework */; };
-		36E2CBDC25B5786D00558DC1 /* Deboogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBDB25B5786D00558DC1 /* Deboogger.framework */; };
-		36E2CBE825B57A0000558DC1 /* VisualEffectView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */; };
+		364D34F42604ADC000BACF1D /* Deboogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F02604ADC000BACF1D /* Deboogger.xcframework */; };
+		364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */; };
+		364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F22604ADC000BACF1D /* Framezilla.xcframework */; };
+		364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F32604ADC000BACF1D /* Base.xcframework */; };
 		OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIViewController+KeyboardNotifications.swift */; };
 		OBJ_101 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Shadow.swift */; };
 		OBJ_102 /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ListPager.swift */; };
@@ -113,7 +110,6 @@
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		OBJ_61 /* PatternTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTimerTests.swift; sourceTree = "<group>"; };
 		OBJ_64 /* ListPagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerTests.swift; sourceTree = "<group>"; };
-		OBJ_68 /* xcfilelists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcfilelists; sourceTree = SOURCE_ROOT; };
 		OBJ_69 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
 		OBJ_70 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		OBJ_71 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
@@ -126,10 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				36E2CBCC25B5779100558DC1 /* Framezilla.framework in Frameworks */,
-				36E2CBDC25B5786D00558DC1 /* Deboogger.framework in Frameworks */,
-				36E2CBE825B57A0000558DC1 /* VisualEffectView.framework in Frameworks */,
-				36E2CBCE25B5779100558DC1 /* Base.framework in Frameworks */,
+				364D34F42604ADC000BACF1D /* Deboogger.xcframework in Frameworks */,
+				364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */,
+				364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */,
+				364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +160,10 @@
 		36E2CBC925B5779100558DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				364D34F32604ADC000BACF1D /* Base.xcframework */,
+				364D34F02604ADC000BACF1D /* Deboogger.xcframework */,
+				364D34F22604ADC000BACF1D /* Framezilla.xcframework */,
+				364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */,
 				36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */,
 				36E2CBDB25B5786D00558DC1 /* Deboogger.framework */,
 				36E2CBCB25B5779100558DC1 /* Base.framework */,
@@ -311,7 +311,6 @@
 				OBJ_7 /* Sources */,
 				OBJ_55 /* Tests */,
 				OBJ_65 /* Products */,
-				OBJ_68 /* xcfilelists */,
 				OBJ_69 /* Carthage */,
 				OBJ_70 /* Cartfile.resolved */,
 				OBJ_71 /* Cartfile */,
@@ -427,7 +426,6 @@
 			buildPhases = (
 				OBJ_121 /* Sources */,
 				OBJ_127 /* Frameworks */,
-				51CE8B6C510BB1AEC8BDD646 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -444,7 +442,6 @@
 			buildConfigurationList = OBJ_107 /* Build configuration list for PBXNativeTarget "BinPackageDescription" */;
 			buildPhases = (
 				OBJ_110 /* Sources */,
-				A8E50C1E273DDC739468F289 /* Carthage */,
 			);
 			buildRules = (
 			);
