@@ -21,6 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		01F776682643E78B009BD1ED /* HSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD884425DB742A0012C127 /* HSLView.swift */; };
+		01F7766D2643E791009BD1ED /* MagnifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD885625DB76300012C127 /* MagnifierView.swift */; };
 		364D34F42604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		364D34F62604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		364D34F82604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
@@ -507,6 +509,7 @@
 			files = (
 				OBJ_78 /* AppConfiguration.swift in Sources */,
 				OBJ_80 /* Coordinator.swift in Sources */,
+				01F7766D2643E791009BD1ED /* MagnifierView.swift in Sources */,
 				OBJ_82 /* DictionaryDecoder.swift in Sources */,
 				OBJ_83 /* DictionaryEncoder.swift in Sources */,
 				OBJ_84 /* Data+Pack.swift in Sources */,
@@ -521,6 +524,7 @@
 				OBJ_93 /* PlaybackIndicatorView.swift in Sources */,
 				OBJ_94 /* SafeAreaContainerView.swift in Sources */,
 				OBJ_95 /* SecureTextField.swift in Sources */,
+				01F776682643E78B009BD1ED /* HSLView.swift in Sources */,
 				OBJ_96 /* TextFieldInputView.swift in Sources */,
 				OBJ_97 /* AlignButton.swift in Sources */,
 				OBJ_98 /* TextInputTraits.swift in Sources */,
