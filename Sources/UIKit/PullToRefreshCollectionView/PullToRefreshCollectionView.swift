@@ -37,6 +37,8 @@ public class PullToRefreshCollectionView: UICollectionView {
     }
 
     private enum Constants {
+        /// vertical inset is value that means vertical space around refresh view
+        /// this value was calculated by selection method and you can't change it
         static let defaultRefreshControlVerticalInset: CGFloat = 16
     }
 
@@ -81,6 +83,8 @@ public class PullToRefreshCollectionView: UICollectionView {
         refreshHandler?()
     }
 
+    /// Target  for valueChanged of UIRefreshControl handled by another
+    /// where refresh control should end refreshing to prevent bug with
     @objc private func refreshControlTriggeredBySystem() {
         refreshControl?.endRefreshing()
     }
@@ -88,6 +92,8 @@ public class PullToRefreshCollectionView: UICollectionView {
 
 extension PullToRefreshCollectionView: UICollectionViewDelegate {
 
+    /// scrollViewDidScroll needed for refreshView layout according to content offset
+    /// and for calling refresherHidesHandler
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
 
@@ -107,6 +113,8 @@ extension PullToRefreshCollectionView: UICollectionViewDelegate {
         scrollDelegate?.scrollViewDidScroll?(scrollView)
     }
 
+    /// scrollViewDidScroll needed for refreshView layout according to content offset
+    /// and for calling refresherHidesHandler
     public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         if (scrollView.contentOffset.y < (-refreshControlHeight - scrollView.contentInset.top)) && !isRefreshing {
             refreshControlTriggered()
