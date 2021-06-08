@@ -3,17 +3,21 @@
 //
 
 import UIKit
-import Framezilla
 
 public class PullToRefreshCollectionView: UICollectionView {
 
+    /// The proxy of `UIScrollViewDelegate` which you should use instead of default delegate
+    /// because `PullToRefreshCollectionView` should be scroll view delegate of its self
     public weak var scrollDelegate: UIScrollViewDelegate?
 
+    /// Handler which calls when refresh event triggered
     public var refreshHandler: (() -> Void)?
+
+    /// Handler which calls when refresh view becomes hidden
+    /// Its may be useful if you need to stop animate of refresh view after its hides
     public var refresherHidesHandler: (() -> Void)?
 
-    public var refreshControlVerticalInset: CGFloat = 16
-
+    /// View which will be displayed instead of default refresher
     public var refreshView: UIView? {
         willSet {
             refreshView?.removeFromSuperview()
@@ -28,11 +32,17 @@ public class PullToRefreshCollectionView: UICollectionView {
         }
     }
 
-    private var refreshControlHeight: CGFloat {
-        (refreshView?.frame.height ?? 0) + refreshControlVerticalInset * 2
+    public var isRefreshing: Bool {
+        refreshControl?.isRefreshing ?? false
     }
 
-    private var isRefreshing: Bool = false
+    private enum Constants {
+        static let defaultRefreshControlVerticalInset: CGFloat = 16
+    }
+
+    private var refreshControlHeight: CGFloat {
+        (refreshView?.frame.height ?? 0) + Constants.defaultRefreshControlVerticalInset * 2
+    }
     private var refreshViewYOffset: CGFloat = 0
 
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -53,23 +63,20 @@ public class PullToRefreshCollectionView: UICollectionView {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-
         layoutRefreshView()
     }
 
     public func endRefreshing() {
-        isRefreshing = false
         refreshControl?.endRefreshing()
     }
 
     private func layoutRefreshView() {
-        refreshView?.configureFrame { maker in
-            maker.centerY(offset: refreshViewYOffset).centerX()
-        }
+        let refreshViewX = bounds.width / 2 - (refreshView?.frame.width ?? 0) / 2
+        let refreshViewY = (refreshControl?.frame.height ?? 0) / 2 - (refreshView?.frame.height ?? 0) / 2
+        refreshView?.frame.origin = .init(x: refreshViewX, y: refreshViewY - refreshViewYOffset)
     }
 
     private func refreshControlTriggered() {
-        isRefreshing = true
         refreshControl?.beginRefreshing()
         refreshHandler?()
     }
