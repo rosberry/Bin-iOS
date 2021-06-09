@@ -6,6 +6,12 @@ import UIKit
 
 public class PullToRefreshCollectionView: UICollectionView {
 
+    private enum Constants {
+        /// vertical inset is value that means vertical space around refresh view
+        /// this value was calculated by selection method and you can't change it
+        static let defaultRefreshControlVerticalInset: CGFloat = 16
+    }
+
     /// The proxy of `UIScrollViewDelegate` which you should use instead of default delegate
     /// because `PullToRefreshCollectionView` should be scroll view delegate of its self
     public weak var scrollDelegate: UIScrollViewDelegate?
@@ -23,12 +29,10 @@ public class PullToRefreshCollectionView: UICollectionView {
             refreshView?.removeFromSuperview()
         }
         didSet {
-            if let view = refreshView {
-                refreshControl?.addSubview(view)
+            guard let view = refreshView else {
+                return
             }
-            else {
-                refreshView?.removeFromSuperview()
-            }
+            refreshControl?.addSubview(view)
         }
     }
 
@@ -36,16 +40,13 @@ public class PullToRefreshCollectionView: UICollectionView {
         refreshControl?.isRefreshing ?? false
     }
 
-    private enum Constants {
-        /// vertical inset is value that means vertical space around refresh view
-        /// this value was calculated by selection method and you can't change it
-        static let defaultRefreshControlVerticalInset: CGFloat = 16
-    }
-
     private var refreshControlHeight: CGFloat {
         (refreshView?.frame.height ?? 0) + Constants.defaultRefreshControlVerticalInset * 2
     }
+
     private var refreshViewYOffset: CGFloat = 0
+
+    // MARK: - Lifecycle
 
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -72,6 +73,8 @@ public class PullToRefreshCollectionView: UICollectionView {
         refreshControl?.endRefreshing()
     }
 
+    // MARK: - Private
+
     private func layoutRefreshView() {
         let refreshViewX = bounds.width / 2 - (refreshView?.frame.width ?? 0) / 2
         let refreshViewY = (refreshControl?.frame.height ?? 0) / 2 - (refreshView?.frame.height ?? 0) / 2
@@ -90,6 +93,7 @@ public class PullToRefreshCollectionView: UICollectionView {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension PullToRefreshCollectionView: UICollectionViewDelegate {
 
     /// scrollViewDidScroll needed for refreshView layout according to content offset
