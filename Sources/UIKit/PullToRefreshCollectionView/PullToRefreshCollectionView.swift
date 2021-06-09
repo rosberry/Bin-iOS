@@ -51,13 +51,7 @@ public class PullToRefreshCollectionView: UICollectionView {
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         delegate = self
-
-        let refreshControl = UIRefreshControl()
-        refreshControl.backgroundColor = .clear
-        refreshControl.tintColor = .clear
-        refreshControl.addTarget(self, action: #selector(refreshControlTriggeredBySystem), for: .valueChanged)
-
-        self.refreshControl = refreshControl
+        refreshControl = configuredRefreshControl()
     }
 
     required init?(coder: NSCoder) {
@@ -74,6 +68,14 @@ public class PullToRefreshCollectionView: UICollectionView {
     }
 
     // MARK: - Private
+
+    private func configuredRefreshControl() -> UIRefreshControl {
+        let refreshControl = UIRefreshControl()
+        refreshControl.backgroundColor = .clear
+        refreshControl.tintColor = .clear
+        refreshControl.addTarget(self, action: #selector(refreshControlTriggeredBySystem), for: .valueChanged)
+        return refreshControl
+    }
 
     private func layoutRefreshView() {
         let refreshViewX = bounds.width / 2 - (refreshView?.frame.width ?? 0) / 2
