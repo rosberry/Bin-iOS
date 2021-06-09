@@ -51,7 +51,7 @@ public class PullToRefreshCollectionView: UICollectionView {
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         delegate = self
-        refreshControl = configuredRefreshControl()
+        refreshControl = makeRefreshControl()
     }
 
     required init?(coder: NSCoder) {
@@ -69,7 +69,7 @@ public class PullToRefreshCollectionView: UICollectionView {
 
     // MARK: - Private
 
-    private func configuredRefreshControl() -> UIRefreshControl {
+    private func makeRefreshControl() -> UIRefreshControl {
         let refreshControl = UIRefreshControl()
         refreshControl.backgroundColor = .clear
         refreshControl.tintColor = .clear
