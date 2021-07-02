@@ -25,10 +25,8 @@ public class PullToRefreshCollectionView: UICollectionView {
 
     /// View which will be displayed instead of default refresher
     public var refreshView: UIView? {
-        willSet {
-            refreshView?.removeFromSuperview()
-        }
         didSet {
+            oldValue?.removeFromSuperview()
             guard let view = refreshView else {
                 return
             }
@@ -50,12 +48,12 @@ public class PullToRefreshCollectionView: UICollectionView {
 
     public override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
-        delegate = self
-        refreshControl = makeRefreshControl()
+        setup()
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setup()
     }
 
     public override func layoutSubviews() {
@@ -68,6 +66,11 @@ public class PullToRefreshCollectionView: UICollectionView {
     }
 
     // MARK: - Private
+
+    private func setup() {
+        delegate = self
+        refreshControl = makeRefreshControl()
+    }
 
     private func makeRefreshControl() -> UIRefreshControl {
         let refreshControl = UIRefreshControl()
