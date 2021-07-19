@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -21,10 +21,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		364D34F42604ADC000BACF1D /* Deboogger.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F02604ADC000BACF1D /* Deboogger.xcframework */; };
-		364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */; };
-		364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F22604ADC000BACF1D /* Framezilla.xcframework */; };
-		364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F32604ADC000BACF1D /* Base.xcframework */; };
+		01F776682643E78B009BD1ED /* HSLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD884425DB742A0012C127 /* HSLView.swift */; };
+		01F7766D2643E791009BD1ED /* MagnifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD885625DB76300012C127 /* MagnifierView.swift */; };
+		364D34F42604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		364D34F62604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		364D34F82604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		364D34FA2604ADC000BACF1D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIViewController+KeyboardNotifications.swift */; };
 		OBJ_101 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Shadow.swift */; };
 		OBJ_102 /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ListPager.swift */; };
@@ -74,10 +76,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		364D34F02604ADC000BACF1D /* Deboogger.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Deboogger.xcframework; path = Carthage/Build/Deboogger.xcframework; sourceTree = "<group>"; };
-		364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VisualEffectView.xcframework; path = Carthage/Build/VisualEffectView.xcframework; sourceTree = "<group>"; };
-		364D34F22604ADC000BACF1D /* Framezilla.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Framezilla.xcframework; path = Carthage/Build/Framezilla.xcframework; sourceTree = "<group>"; };
-		364D34F32604ADC000BACF1D /* Base.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Base.xcframework; path = Carthage/Build/Base.xcframework; sourceTree = "<group>"; };
+		01AD884425DB742A0012C127 /* HSLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSLView.swift; sourceTree = "<group>"; };
+		01AD885625DB76300012C127 /* MagnifierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierView.swift; sourceTree = "<group>"; };
+		01AD885D25DB76CB0012C127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36E2CBCA25B5779100558DC1 /* Framezilla.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Framezilla.framework; path = Carthage/Build/iOS/Framezilla.framework; sourceTree = "<group>"; };
 		36E2CBCB25B5779100558DC1 /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = Carthage/Build/iOS/Base.framework; sourceTree = "<group>"; };
 		36E2CBDB25B5786D00558DC1 /* Deboogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Deboogger.framework; path = Carthage/Build/iOS/Deboogger.framework; sourceTree = "<group>"; };
@@ -112,7 +113,6 @@
 		OBJ_61 /* PatternTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternTimerTests.swift; sourceTree = "<group>"; };
 		OBJ_64 /* ListPagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPagerTests.swift; sourceTree = "<group>"; };
 		OBJ_69 /* Carthage */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Carthage; sourceTree = SOURCE_ROOT; };
-		OBJ_70 /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		OBJ_71 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		OBJ_72 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_9 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -123,10 +123,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				364D34F42604ADC000BACF1D /* Deboogger.xcframework in Frameworks */,
-				364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */,
-				364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */,
-				364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */,
+				364D34F42604ADC000BACF1D /* (null) in Frameworks */,
+				364D34F82604ADC000BACF1D /* (null) in Frameworks */,
+				364D34FA2604ADC000BACF1D /* (null) in Frameworks */,
+				364D34F62604ADC000BACF1D /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,13 +141,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01AD884325DB74130012C127 /* ColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				01AD885625DB76300012C127 /* MagnifierView.swift */,
+				01AD884425DB742A0012C127 /* HSLView.swift */,
+			);
+			path = ColorPicker;
+			sourceTree = "<group>";
+		};
+		01AD885C25DB76AD0012C127 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				01AD885D25DB76CB0012C127 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		36E2CBC925B5779100558DC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				364D34F32604ADC000BACF1D /* Base.xcframework */,
-				364D34F02604ADC000BACF1D /* Deboogger.xcframework */,
-				364D34F22604ADC000BACF1D /* Framezilla.xcframework */,
-				364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */,
 				36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */,
 				36E2CBDB25B5786D00558DC1 /* Deboogger.framework */,
 				36E2CBCB25B5779100558DC1 /* Base.framework */,
@@ -210,6 +223,7 @@
 		OBJ_27 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				01AD884325DB74130012C127 /* ColorPicker */,
 				OBJ_28 /* Common */,
 				OBJ_40 /* Dependent */,
 				OBJ_48 /* Independent */,
@@ -295,7 +309,6 @@
 				OBJ_55 /* Tests */,
 				OBJ_65 /* Products */,
 				OBJ_69 /* Carthage */,
-				OBJ_70 /* Cartfile.resolved */,
 				OBJ_71 /* Cartfile */,
 				OBJ_72 /* README.md */,
 				36E2CBC925B5779100558DC1 /* Frameworks */,
@@ -364,6 +377,7 @@
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				01AD885C25DB76AD0012C127 /* Resources */,
 				OBJ_8 /* AppConfiguration */,
 				OBJ_12 /* Coordinators */,
 				OBJ_17 /* Foundation */,
@@ -390,6 +404,7 @@
 			buildPhases = (
 				OBJ_77 /* Sources */,
 				OBJ_105 /* Frameworks */,
+				01E2D6F325DB91F2000BE010 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -460,6 +475,16 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		01E2D6F325DB91F2000BE010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		OBJ_110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -484,6 +509,7 @@
 			files = (
 				OBJ_78 /* AppConfiguration.swift in Sources */,
 				OBJ_80 /* Coordinator.swift in Sources */,
+				01F7766D2643E791009BD1ED /* MagnifierView.swift in Sources */,
 				OBJ_82 /* DictionaryDecoder.swift in Sources */,
 				OBJ_83 /* DictionaryEncoder.swift in Sources */,
 				OBJ_84 /* Data+Pack.swift in Sources */,
@@ -498,6 +524,7 @@
 				OBJ_93 /* PlaybackIndicatorView.swift in Sources */,
 				OBJ_94 /* SafeAreaContainerView.swift in Sources */,
 				OBJ_95 /* SecureTextField.swift in Sources */,
+				01F776682643E78B009BD1ED /* HSLView.swift in Sources */,
 				OBJ_96 /* TextFieldInputView.swift in Sources */,
 				OBJ_97 /* AlignButton.swift in Sources */,
 				OBJ_98 /* TextInputTraits.swift in Sources */,
@@ -569,11 +596,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Bin.xcodeproj/BinTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -599,11 +622,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Bin.xcodeproj/BinTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -662,8 +681,7 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -680,10 +698,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Bin.xcodeproj/Bin_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -712,10 +727,7 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Bin.xcodeproj/Bin_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
