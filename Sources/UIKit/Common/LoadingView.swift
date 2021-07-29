@@ -57,10 +57,15 @@ public class LoadingView: UIView {
     // MARK: - Animations
 
     public func update(loading: Bool, animated: Bool = false) {
-        guard loading == false, isAnimating == false else {
+        guard loading != isAnimating else {
             return
         }
-        loading ? startAnimating(animated: animated) : stopAnimating(animated: animated)
+        if isLoading {
+            startAnimating(animated: animated)
+        }
+        else {
+            stopAnimating(animated: animated)
+        }
     }
 
     public func startAnimating(animated: Bool = false) {
