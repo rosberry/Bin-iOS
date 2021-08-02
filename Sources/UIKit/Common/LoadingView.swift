@@ -12,6 +12,8 @@ public class LoadingView: UIView {
 
     public private(set) var isAnimating: Bool
 
+    public var hidesWhenStopped: Bool = true
+
     // MARK: - Subviews
 
     public private(set) lazy var imageView: UIImageView = .init()
@@ -23,7 +25,7 @@ public class LoadingView: UIView {
         super.init(frame: .zero)
         imageView.image = image
         addSubview(imageView)
-        isHidden = true
+        isHidden = hidesWhenStopped
         sizeToFit()
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(appWillEnterForeground),
@@ -65,7 +67,9 @@ public class LoadingView: UIView {
 
     public func startAnimating(animated: Bool = false) {
         isAnimating = true
-        setHidden(false, animated: animated)
+        if hidesWhenStopped {
+            setHidden(false, animated: animated)
+        }
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0
         rotationAnimation.toValue = Float.pi * 2
@@ -77,8 +81,13 @@ public class LoadingView: UIView {
 
     public func stopAnimating(animated: Bool = false) {
         isAnimating = false
-        setHidden(true, animated: animated) { _ in
-            self.imageView.layer.removeAnimation(forKey: Constants.rotationAnimationKey)
+        if hidesWhenStopped {
+            setHidden(true, animated: animated) { _ in
+                self.imageView.layer.removeAnimation(forKey: Constants.rotationAnimationKey)
+            }
+        }
+        else {
+            imageView.layer.removeAnimation(forKey: Constants.rotationAnimationKey)
         }
     }
 }
