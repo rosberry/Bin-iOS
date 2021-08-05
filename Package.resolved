@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Base",
+        "repositoryURL": "https://github.com/rosberry/Base-iOS",
+        "state": {
+          "branch": "master",
+          "revision": "8eb6695403aeb4e16525ccbcca07d97147c016ba",
+          "version": null
+        }
+      },
+      {
+        "package": "Deboogger",
+        "repositoryURL": "https://github.com/rosberry/Deboogger",
+        "state": {
+          "branch": "swift-package",
+          "revision": "7b1c45923f424c65765d98529fd484e1c4fdd58c",
+          "version": null
+        }
+      },
+      {
+        "package": "Framezilla",
+        "repositoryURL": "https://github.com/rosberry/Framezilla",
+        "state": {
+          "branch": "feature/update-spm-manifest",
+          "revision": "22394eee07e845df421f663827d236f36a73587c",
+          "version": null
+        }
+      },
+      {
+        "package": "VisualEffectView",
+        "repositoryURL": "https://github.com/efremidze/VisualEffectView",
+        "state": {
+          "branch": null,
+          "revision": "8f35b1c6096d8d8474471b494efb5b56c5964186",
+          "version": "4.1.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

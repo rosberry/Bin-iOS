@@ -25,6 +25,7 @@
 		364D34F62604ADC000BACF1D /* VisualEffectView.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F12604ADC000BACF1D /* VisualEffectView.xcframework */; };
 		364D34F82604ADC000BACF1D /* Framezilla.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F22604ADC000BACF1D /* Framezilla.xcframework */; };
 		364D34FA2604ADC000BACF1D /* Base.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 364D34F32604ADC000BACF1D /* Base.xcframework */; };
+		85AF4C62266E40EE007A7EA5 /* PullToRefreshCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF4C61266E40EE007A7EA5 /* PullToRefreshCollectionView.swift */; };
 		OBJ_100 /* UIViewController+KeyboardNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* UIViewController+KeyboardNotifications.swift */; };
 		OBJ_101 /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* Shadow.swift */; };
 		OBJ_102 /* ListPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* ListPager.swift */; };
@@ -82,6 +83,7 @@
 		36E2CBCB25B5779100558DC1 /* Base.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Base.framework; path = Carthage/Build/iOS/Base.framework; sourceTree = "<group>"; };
 		36E2CBDB25B5786D00558DC1 /* Deboogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Deboogger.framework; path = Carthage/Build/iOS/Deboogger.framework; sourceTree = "<group>"; };
 		36E2CBE725B57A0000558DC1 /* VisualEffectView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisualEffectView.framework; path = Carthage/Build/iOS/VisualEffectView.framework; sourceTree = "<group>"; };
+		85AF4C61266E40EE007A7EA5 /* PullToRefreshCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshCollectionView.swift; sourceTree = "<group>"; };
 		"Bin::Bin::Product" /* Bin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Bin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Bin::BinTests::Product" /* BinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = BinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_13 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85AF4C60266E40D4007A7EA5 /* PullToRefreshCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				85AF4C61266E40EE007A7EA5 /* PullToRefreshCollectionView.swift */,
+			);
+			path = PullToRefreshCollectionView;
+			sourceTree = "<group>";
+		};
 		OBJ_12 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 		OBJ_27 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				85AF4C60266E40D4007A7EA5 /* PullToRefreshCollectionView */,
 				OBJ_28 /* Common */,
 				OBJ_40 /* Dependent */,
 				OBJ_48 /* Independent */,
@@ -494,6 +505,7 @@
 				OBJ_89 /* CustomOperationView.swift in Sources */,
 				OBJ_90 /* LoadingView.swift in Sources */,
 				OBJ_91 /* OperationContainerView.swift in Sources */,
+				85AF4C62266E40EE007A7EA5 /* PullToRefreshCollectionView.swift in Sources */,
 				OBJ_92 /* BarAnimationConfiguration.swift in Sources */,
 				OBJ_93 /* PlaybackIndicatorView.swift in Sources */,
 				OBJ_94 /* SafeAreaContainerView.swift in Sources */,
