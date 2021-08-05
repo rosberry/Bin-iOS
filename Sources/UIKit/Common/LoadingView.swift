@@ -62,7 +62,7 @@ public class LoadingView: UIView {
         guard loading != isAnimating else {
             return
         }
-        if isLoading {
+        if loading {
             startAnimating(animated: animated)
         }
         else {
